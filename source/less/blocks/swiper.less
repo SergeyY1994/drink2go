@@ -1,0 +1,76 @@
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  @media (min-width: @tablet-width) {
+    min-height: 768px;
+    width: 608px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 624px;
+    width: @desktop-width;
+  }
+}
+
+.swiper-button-prev {
+  left: -9px;
+
+  @media (min-width: @tablet-width) {
+    left: -8px;
+  }
+}
+
+.swiper-button-next {
+  right: -9px;
+
+  @media (min-width: @tablet-width) {
+    right: -8px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 295px;
+
+  @media (min-width: @tablet-width) {
+    top: 295px;
+  }
+
+  &:active {
+    background-image: linear-gradient(90deg, #7859cf40 0%, #7859cf00 100%);
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 14px;
+  color: @base-primary;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: none;
+  border-radius: 0;
+  width: 62px;
+  height: 4px;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    vertical-align: middle;
+    background-color: @base-white;
+
+    &:hover,
+    &:focus {
+      background-color: @primary-opacity;
+    }
+
+    &:active {
+      background-color: @base-primary;
+    }
+  }
+}

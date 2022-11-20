@@ -1,0 +1,37 @@
+.navigation__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: @base-primary;
+}
+
+.navigation__list {
+  .list-normalize();
+  text-transform: uppercase;
+}
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.navigation__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 32px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: @base-black;
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+}

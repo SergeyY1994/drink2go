@@ -1,0 +1,236 @@
+@media (max-width: @mobile-width-only) {
+  .main-navigation--closed .main-navigation__site-item {
+    display: none;
+  }
+
+  .main-navigation--opened .main-navigation__wrapper {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    background-image: url("/img/toggle-closed.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-navigation--closed .main-navigation__toggle {
+    background-image: url("/img/toggle-opened.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-navigation--nojs .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation--nojs .main-navigation__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-navigation--nojs .main-navigation__site-item {
+    display: block;
+  }
+}
+
+.main-navigation {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.main-navigation__wrapper {
+  @media (min-width: @tablet-width) {
+    margin-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 162px;
+  }
+}
+
+.main-navigation__toggle {
+  width: 60px;
+  height: 60px;
+  display: block;
+  padding: 0;
+  background-color: @base-white;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  &--header {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation__site-list,
+.main-navigation__user-list {
+  .list-normalize();
+  background-color: @base-white;
+}
+
+.main-navigation__user-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-navigation__site-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.main-navigation__site-list .main-navigation__link {
+  display: block;
+  min-width: 280px;
+  min-height: 57px;
+  padding: 20px 0 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: @base-black;
+
+  @media (min-width: @tablet-width) {
+    .flex-center();
+    min-width: auto;
+    width: 103px;
+    min-height: 80px;
+  }
+}
+
+.main-navigation__site-item--current .main-navigation__link {
+  color: @base-primary;
+}
+
+.main-navigation__user-list .main-navigation__link {
+  display: block;
+  width: 60px;
+  min-height: 60px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .flex-center();
+    width: 129px;
+  }
+}
+
+.main-navigation__link {
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    background-color: @base-secondary;
+  }
+
+  &--user {
+    background-image: url("/img/user-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: @base-secondary;
+      background-image: url("/img/user-icon-hover.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 15px center;
+    }
+  }
+
+  &--backet {
+    background-image: url("/img/backet-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      background-color: @base-secondary;
+      background-image: url("/img/backet-icon-hover.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      background-position: 15px center;
+    }
+  }
+}
+
+.main-navigation__link .main-navigation__text {
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}
+
+.main-navigation__site-item {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0.5px;
+    background-color: @base-secondary;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: @base-secondary;
+  }
+}
+
+.main-navigation__site-list .main-navigation__site-item--current {
+  position: relative;
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      background-color: @base-primary;
+    }
+  }
+}
+
+.main-navigation__text {
+  font-size: 0;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @base-black;
+  }
+}

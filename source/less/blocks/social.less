@@ -1,0 +1,36 @@
+.social {
+  min-height: 40px;
+}
+
+.social__list {
+  .list-normalize();
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+  width: 160px;
+}
+
+.social__link {
+  .flex-center();
+  width: 40px;
+  min-height: 40px;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+  }
+
+  &:active {
+    background-color: @primary-opacity;
+  }
+}
+
+.social__icon {
+  fill: @base-gray;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:active .social__icon {
+  fill: @base-primary;
+}

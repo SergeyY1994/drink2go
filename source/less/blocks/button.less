@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8px;
+  font-family: @Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  background-color: @base-primary;
+  color: @base-white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-gray;
+  }
+}

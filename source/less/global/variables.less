@@ -1,0 +1,48 @@
+@mobile-width: 320px;
+@mobile-width-only: 767px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
+@mobile-padding: 0 20px;
+@tablet-padding: 0 20px;
+@desktop-padding: 0 40px;
+
+@Montserrat: "Montserrat", sans-serif;
+
+@base-white: #ffffff;
+@base-black: #333333;
+@base-gray: #bdbdbd;
+@base-primary: #7859cf;
+@base-secondary: #f0ebff;
+@primary-opacity:#7859cf40;
+@primary-lighter: #9070ec;
+@primary-darker: #593cac;
+@light-gray: #e2e2e2;
+@lightest-gray: #f8f8f8;
+@flat-white: #f3ebe1;
+@lavender-latte: #eae6fc;
+@espresso: #e5e6e8;
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fieldset-normalize() {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  border: 0;
+}
+
+.list-normalize() {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.contain-center(@_width) {
+  width: @_width;
+  margin-left: auto;
+  margin-right: auto;
+}
